@@ -1,0 +1,4 @@
+html, body{height:100%;}
+body{margin:0; background:#07070a;}
+*{box-sizing:border-box;}
+button, input, select{font: inherit;}

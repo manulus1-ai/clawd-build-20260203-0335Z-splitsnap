@@ -1,0 +1,31 @@
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">SS</div>
+      <div class="title">
+        <div class="name">{{ vm().title }}</div>
+        <div class="tag">scan → fix → assign → trust the math</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/scan" routerLinkActive="active">Scan</a>
+      <a routerLink="/assign" routerLinkActive="active" [class.disabled]="!vm().hasReceipt">Assign</a>
+      <a routerLink="/summary" routerLinkActive="active" [class.disabled]="!vm().hasPeople">Summary</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn ghost" (click)="undo()" title="Undo">Undo</button>
+      <button class="btn danger" (click)="reset()" title="Start over">Reset</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <span>Privacy: everything stays on-device unless you choose to share a link.</span>
+  </footer>
+</div>

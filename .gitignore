@@ -1,0 +1,12 @@
+# Node
+node_modules/
+
+# Angular
+frontend/**/dist/
+frontend/**/.angular/
+
+# OS
+.DS_Store
+
+# Local
+.env
